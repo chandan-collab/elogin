@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <title>Login Page</title>
+    <style>
+        body {
+            font-family:'Poppins', sans-serif;
+            background: linear-gradient(to right, #e0eafc, #cfdef3);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0;
+        }
+        video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+        .navigation {
+            position: absolute;
+            top: 50px;
+            right: 40px;
+            display: flex;
+            justify-content: space-between;
+            font-size: 14px;
+        }
+        .navigation a {
+            text-decoration: none;
+            color: rgb(255, 255, 255);
+            margin: 0 5px;
+        }
+        .navigation a:hover {
+            text-decoration: underline;
+        }
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            position: absolute;
+            bottom: 20px;
+            width: 100%;
+        }
+        .social-icons img {
+            width: 30px;
+            height: 30px;
+            margin: 0 20px;
+            cursor: pointer;
+        }
+        .header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 35%;
+            height: 50px;
+            border-radius: 12px;
+            background-color: rgba(255, 255, 255, 0.3);
+            margin-top: 5px;
+            position: absolute;
+            top: 20px;
+        }
+        .search-box {
+          display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 45%;
+            height: 50px;
+            border-radius: 12px;
+            margin-top: 80px;
+            position: absolute;
+            top: 20px;
+        }
+        .search-box input {
+            width: 300px;
+            padding: 10px;
+            border: none;
+            border-radius: 20px;
+            background-color: rgba(255, 255, 255, 0.9);
+            outline: none;
+            font-family: 'Poppins', sans-serif;
+            font-size: 14px;
+            color: #555;
+            box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.1);
+        }
+        .search-box input::placeholder {
+            color: #2c2b2b;
+        }
+        .search-box button {
+            margin-left: 10px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 20px;
+            background-color: #3498db;
+            color: white;
+            font-family: 'Poppins', sans-serif;
+            font-size: 14px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .search-box button:hover {
+            background-color: #2980b9;
+        }
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            max-width: 1200px;
+            z-index: 1;
+        }
+        .login-container {
+            font-family: 'Poppins', sans-serif;
+            background-position: center;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 7px rgb(255, 255, 255);
+            text-align: center;
+            transition: all 0.3s ease;
+            background: rgba(255, 255, 255, 0.7);
+        }
+        .login-container:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgb(248, 248, 248);
+        }
+        h2 {
+            color: #3498db;
+            margin-bottom: 10px;
+            font-size: 20px;
+        }
+        p {
+            color: #727f80;
+            font-size: 14px;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h2>Step into the world of music</h2> 
+    </div>
+    
+    <!-- Search Box -->
+    <div class="search-box">
+        <input type="text" placeholder="Search for music, artists, or instruments...">
+        <button>Search</button>
+    </div>
+    
+    <!-- Background video -->
+    <video autoplay muted loop>
+        <source src="darkv.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <div class="navigation">
+        <a href="#">Home</a>
+        <a href="#"></a>
+        <a href="#">About</a>
+    </div>
+    <div class="social-icons">
+        <a href="https://www.instagram.com" target="_blank">
+            <img src="Instagram.svg" alt="">
+        </a>
+        <a href="https://www.facebook.com" target="_blank">
+            <img src="facebook.png" alt="">
+        </a>
+        <a href="https://www.google.com" target="_blank">
+            <img src="google.png" alt="">
+        </a>
+    </div>
+    
+    <!-- Responsive Grid with 6 Login Containers -->
+    <div class="grid-container">
+        <div class="login-container">
+            <h2>Buy</h2>
+            <p>Buy music audio</p>
+        </div>
+        <div class="login-container">
+            <h2>Create</h2>
+            <p>Create a masterpiece</p>
+        </div>
+        <div class="login-container">
+            <h2>Upload</h2>
+            <p>Upload your work</p>
+        </div>
+        <div class="login-container">
+            <h2>Book Show</h2>
+            <p>Book show/tickets</p>
+        </div>
+        <div class="login-container">
+            <h2>Sell</h2>
+            <p>Sell your music</p>
+        </div>
+        <div class="login-container">
+            <h2>Rent items</h2>
+            <p>Rent instruments/items</p>
+        </div>
+    </div>
+</body>
+</html>

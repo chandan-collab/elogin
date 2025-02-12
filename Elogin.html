@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>Login Page</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            background: linear-gradient(to right, #e0eafc, #cfdef3); /* Light blue gradient background */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0; /* Remove default body margin */
+        }
+        video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Ensures the video covers the entire viewport */
+            z-index: -1; /* Sends the video to the background */
+        }
+        .navigation {
+            position: absolute; /* Positions it relative to the body */
+            top: 50px; /* Distance from the top of the page */
+            right: 70px; /* Distance from the right side of the page */
+            display: flex;
+            justify-content: space-between;
+            font-size: 14px;
+        }
+        .navigation a {
+            text-decoration: none;
+            color: rgb(255, 255, 255);
+            margin: 0 5px;
+        }
+        .navigation a:hover {
+            text-decoration: underline;
+        }
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            position: absolute;
+            bottom: 20px; 
+            width: 100%; 
+        }
+        .social-icons img {
+            width: 30px;
+            height: 30px;
+            margin: 0 20px;
+            cursor: pointer;
+        }
+        .login-container {
+            font-family: 'Poppins', sans-serif;
+            background-position: center;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 0 7px rgb(255, 255, 255);
+            width: 350px; /* Adjust width as needed */
+        }
+        .login-container:hover {
+            transform: scale(1.03); /* Slightly scale up the container */
+            box-shadow: 0 6px 12px rgb(248, 248, 248); /* Increase the shadow */
+        }
+        h2 {
+            text-align: center;
+            color: #3498db; /* Blue heading color */
+            margin-bottom: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #7f8c8d; /* Gray label color */
+        }
+        input[type="text"],
+        input[type="password"] {
+            width: calc(100% - 12px); /* Account for padding */
+            padding: 10px;
+            border: 1px solid #bdc3c7; /* Light gray border */
+            border-radius: 10px;
+            box-sizing: border-box; /* Include padding in width */
+            font-size: 16px;
+        }
+        input[type="submit"] {
+            background-color: #3498db; /* Blue submit button */
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            width: 96%;
+            font-size: 16px;
+        }
+        input[type="submit"]:hover {
+            background-color: #2980b9; /* Darker blue on hover */
+        }
+        .forgot-password {
+            text-align: center;
+            margin-top: 15px;
+        }
+        .forgot-password a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        .forgot-password a:hover {
+            color: rgb(255, 255, 255);
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <!-- Background video -->
+    <video autoplay muted loop>
+        <source src="darkv.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <div class="navigation">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="signup.html">Sign</a> <!-- Redirects to signup.html -->
+    </div>
+    <div class="social-icons">
+        <a href="https://www.instagram.com" target="_blank">
+            <img src="Instagram.svg" alt="">
+        </a>
+        <a href="https://www.facebook.com" target="_blank">
+            <img src="facebook.png" alt="">
+        </a>
+        <a href="https://www.google.com" target="_blank">
+            <img src="google.png" alt="">
+        </a>
+    </div>
+
+    <div class="login-container">
+        <h2>Login</h2>
+        <!-- Redirect to demo.html -->
+        <form action="afterlogin.html" method="get">
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <input type="submit" value="Login">
+            <div class="forgot-password">
+                <a href="#">Forgot Password?</a>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

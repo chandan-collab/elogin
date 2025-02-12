@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <title>Signup Page</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            background: linear-gradient(to right, #e0eafc, #cfdef3);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+        video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+        .navigation {
+            position: absolute;
+            top: 50px;
+            right: 70px;
+            display: flex;
+            justify-content: space-between;
+            font-size: 14px;
+        }
+        .navigation a {
+            text-decoration: none;
+            color: rgb(255, 255, 255);
+            margin: 0 5px;
+        }
+        .navigation a:hover {
+            text-decoration: underline;
+        }
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            position: absolute;
+            bottom: 20px;
+            width: 100%;
+        }
+        .social-icons img {
+            width: 30px;
+            height: 30px;
+            margin: 0 20px;
+            cursor: pointer;
+        }
+        .signup-container {
+            font-family: 'Poppins', sans-serif;
+            background-position: center;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 0 7px rgb(255, 255, 255);
+            width: 350px;
+        }
+        .signup-container:hover {
+            transform: scale(1.03);
+            box-shadow: 0 6px 12px rgb(248, 248, 248);
+        }
+        h2 {
+            text-align: center;
+            color: #3498db;
+            margin-bottom: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #7f8c8d;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="password"] {
+            width: calc(100% - 12px);
+            padding: 10px;
+            border: 1px solid #bdc3c7;
+            border-radius: 10px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+        input[type="submit"] {
+            background-color: #3498db;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            width: 96%;
+            font-size: 16px;
+        }
+        input[type="submit"]:hover {
+            background-color: #2980b9;
+        }
+        .login-link {
+            text-align: center;
+            margin-top: 15px;
+        }
+        .login-link a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        .login-link a:hover {
+            color: rgb(255, 255, 255);
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <video autoplay muted loop>
+        <source src="darkv.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <div class="navigation">
+        <a href="Elogin.html">Login</a>
+        <a href="#"></a>
+        <a href="#">About</a>
+    </div>
+    <div class="social-icons">
+        <a href="https://www.instagram.com" target="_blank">
+            <img src="Instagram.svg" alt="Instagram">
+        </a>
+        <a href="https://www.facebook.com" target="_blank">
+            <img src="facebook.png" alt="Facebook">
+        </a>
+        <a href="https://www.google.com" target="_blank">
+            <img src="google.png" alt="Google">
+        </a>
+    </div>
+    <div class="signup-container">
+        <h2>Signup</h2>
+        <form action="aftersignup.html" method="post">
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <input type="submit" value="Signup">
+            <div class="login-link">
+                <a href="Elogin.html">Already have an account? Login</a>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
